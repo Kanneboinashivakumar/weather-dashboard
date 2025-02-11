@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+body {
+    background: radial-gradient(circle, #0d0221 30%, #190a40, #240a67);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+body.dark-mode {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+}
+#dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 0, 255, 0.3);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+#dark-mode-toggle:hover {
+    background: rgba(255, 0, 255, 0.6);
+    transform: scale(1.1);
+}
+.card {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(20, 20, 50, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+}
+body.dark-mode .card {
+    background: rgba(10, 10, 30, 0.9);
+    border: 2px solid rgba(255, 0, 255, 0.7);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.9);
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+.search input {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 20px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 70%;
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.search input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 18px rgba(0, 255, 255, 1);
+}
+.search button {
+    border: none;
+    outline: none;
+    background: rgba(0, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+}
+.search button:hover {
+    background: rgba(0, 255, 255, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+.search button img {
+    width: 24px;
+    filter: brightness(200%);
+}
+.weather-icon {
+    width: 150px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.weather h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff;
+}
+.weather h2 {
+    font-size: 35px;
+    font-weight: 400;
+    opacity: 0.9;
+    color: #00ff88;
+    text-shadow: 0 0 15px #00ff88;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+.col {
+    display: flex;
+    align-items: center;
+}
+.col img {
+    width: 40px;
+    margin-right: 10px;
+    filter: brightness(150%);
+}
+.extra-details {
+    margin-top: 20px;
+    font-size: 16px;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(255, 0, 150, 0.7);
+}
+.error {
+    text-align: center;
+    font-size: 16px;
+    color: #ff6b6b;
+    margin-top: 15px;
+    font-weight: bold;
+    display: none;
+    background: rgba(255, 107, 107, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.weather {
+    display: none;
+    animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
