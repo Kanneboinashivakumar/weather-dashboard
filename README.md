@@ -32,5 +32,5 @@ A sleek and intuitive **Weather Dashboard** that fetches real-time weather data 
 
 1️⃣ **Clone the repository**  
 ```sh
-git clone https://github.com/Kanneboinashivakumar/Advanced-Calculator.git
+git clone https://github.com/Kanneboinashivakumar/weather-dashboard.git
 cd Weather Dashboard   
