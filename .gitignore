@@ -1,0 +1,21 @@
+# 🚀 Ignore dependency folders (if using Node.js in the future)
+node_modules/
+
+# 🖥️ Ignore system-generated files (Mac & Windows)
+.DS_Store  # MacOS Finder settings
+Thumbs.db  # Windows thumbnail cache
+
+# 🔧 Ignore VS Code settings folder (helps avoid editor-specific configs)
+.vscode/
+
+# ⚡ Ignore log and temp files (to keep the repo clean)
+*.log
+*.tmp
+
+# 🔑 Ignore environment variables and API keys (important for security)
+.env
+config.js  # If storing API keys in a separate file
+
+# 📸 Ignore screenshots if you don’t want them in the repo (optional)
+# assets/*.png
+# images/*.png
